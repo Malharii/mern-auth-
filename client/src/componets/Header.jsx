@@ -5,7 +5,7 @@ function Header() {
     <div className="bg-slate-300">
       <div className="flex justify-between items-center max-w-6xl mx-auto">
         <Link to="/">
-          <h1 className="font-bold">Auth App</h1>
+          <h1 className="font-bold">Auth app</h1>
         </Link>
 
         <ul className="flex gap-4">
