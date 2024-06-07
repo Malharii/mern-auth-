@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Oauth from "../componets/Oauth";
 function Singup() {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(false);
@@ -61,11 +62,12 @@ function Singup() {
         />
         <button
           disabled={loading}
-          className="bg-blue-500 hover:bg-blue-600 text-slate-600 uppercase
-        hover:text-white font-bold py-2 px-4 rounded"
+          className="bg-blue-500 hover:bg-blue-600  uppercase
+        text-white font-bold py-2 px-4 rounded hover:opacity-80 disabled:opacity-60"
         >
           {loading ? "Loading..." : "Singup"}
         </button>
+        <Oauth />
       </form>
       <div className="mt-4 flex gap-2">
         <p>Already have an account..?</p>

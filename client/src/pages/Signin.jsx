@@ -7,6 +7,7 @@ import {
 } from "../redux/user/userSlice";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import Oauth from "../componets/Oauth";
 
 function Singin() {
   const [formData, setFormData] = useState({});
@@ -62,11 +63,12 @@ function Singin() {
         />
         <button
           disabled={loading}
-          className="bg-blue-500 hover:bg-blue-600 text-slate-600 uppercase
-        hover:text-white font-bold py-2 px-4 rounded"
+          className="bg-blue-500 hover:bg-blue-600  uppercase
+        text-white font-bold py-2 px-4 rounded hover:opacity-80 disabled:opacity-60"
         >
           {loading ? "Loading..." : "Singin"}
         </button>
+        <Oauth />
       </form>
       <div className="mt-4 flex gap-2">
         <p>Don&apos;t have an account ?</p>
